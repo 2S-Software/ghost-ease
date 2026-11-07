@@ -2,8 +2,11 @@
     margin-top: 2rem;
     margin-bottom: 60px;
     /* Auf grossen Bildschirmen auf die Standard-Artikelbreite begrenzen
-       (Lesbarkeit); auf schmalen Geraeten wirkungslos, da kein Platz uebrig. */
+       (Lesbarkeit) und zentrieren; auf schmalen Geraeten wirkungslos,
+       da kein Platz uebrig. */
     max-width: var(--content-width, 720px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .topic-feed {

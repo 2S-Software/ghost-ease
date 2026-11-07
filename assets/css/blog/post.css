@@ -49,7 +49,12 @@
 }
 
 .gh-article-image figcaption {
+    margin-top: .8rem; /* halbierter Standard (1.6rem) */
     font-size: 1.2rem;
+}
+
+.gh-article-image figcaption a {
+    color: inherit; /* Link in der Bildbeschreibung wie Label-Text färben */
 }
 
 .post-author {
