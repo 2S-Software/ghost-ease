@@ -1,5 +1,13 @@
 .home-intro {
+    margin-top: 2rem;
     margin-bottom: 60px;
+}
+
+.home-intro p,
+.home-intro ul,
+.home-intro ol,
+.home-intro blockquote {
+    max-width: 720px;
 }
 
 .topic-feed {
