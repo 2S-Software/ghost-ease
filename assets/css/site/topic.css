@@ -1,3 +1,7 @@
+.home-intro {
+    margin-bottom: 60px;
+}
+
 .topic-feed {
     display: grid;
     grid-template-columns: 1fr 1fr;
