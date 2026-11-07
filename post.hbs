@@ -10,7 +10,7 @@
             <h1 class="gh-article-title">{{title}}</h1>
 
 
-  {{!-- CHANGE: Auszug im Post --}}
+  {{!-- BEGIN CHANGE: Auszug im Post --}}
   <style>
   .post-excerpt {
     font-size: 2rem;
@@ -24,7 +24,7 @@
 {{else}}
   <p class="post-excerpt">{{excerpt words="40"}}</p>
 {{/if}}
-{{!-- CHANGE: Auszug im Post --}}
+{{!-- END CHANGE: Auszug im Post --}}
           
             <div class="gh-meta-share">
                 <div class="post-meta">
@@ -32,13 +32,13 @@
                         {{t "Last updated on"}}&nbsp;
                         <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="D MMM YYYY"}}</time>
                     </div>
-                    {{!-- CHANGE: Reading time --}}
+                    {{!-- BEGIN CHANGE: Reading time --}}
                     <div class="post-meta-reading-time">
                         <span class="reading-time">{{reading_time minute="1 Min." minutes="% Min."}}&nbsp;{{t "reading time"}}</span>
                     </div>
-                    {{!-- CHANGE: Reading time --}}
+                    {{!-- END CHANGE: Reading time --}}
                 </div>
-  {{!-- CHANGE: Share-Button in Akzentfarbe --}}
+  {{!-- BEGIN CHANGE: Share-Button in Akzentfarbe --}}
   <style>
     .gh-button-share {
       border: 1px solid {{@site.accent_color}};
@@ -50,7 +50,7 @@
       color: #ffffff;
     }
   </style>
-  {{!-- CHANGE: Share-Button in Akzentfarbe --}}
+  {{!-- END CHANGE: Share-Button in Akzentfarbe --}}
                 <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
             </div>
             {{> "post-image"}}
