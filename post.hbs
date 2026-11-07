@@ -8,11 +8,48 @@
 
         <header class="gh-article-header gh-canvas">
             <h1 class="gh-article-title">{{title}}</h1>
-            <div class="gh-meta-share">
+
+
+  {{!-- CHANGE: Auszug im Post --}}
+  <style>
+  .post-excerpt {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #000000;
+    
+  }
+ </style>
+ {{#if custom_excerpt}}
+  <p class="post-excerpt">{{custom_excerpt}}</p>
+{{else}}
+  <p class="post-excerpt">{{excerpt words="40"}}</p>
+{{/if}}
+{{!-- CHANGE: Auszug im Post --}}
+          
+            <div class="gh-meta-share">                
                 <div class="post-meta">
-                    Last updated on&nbsp;
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="DD MMM YYYY"}}</time>
+                    {{t "Last updated on"}}&nbsp;
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="D MMM YYYY"}}</time>
+                  {{!-- CHANGE: Reading time --}}
+                  &nbsp;|&nbsp;                  
+                  <span class="reading-time">{{reading_time minute="1 Min." minutes="% Min."}}&nbsp;{{t "reading time"}}</span>
+                  {{!-- CHANGE: Reading time --}}
+                                   
+                  
                 </div>
+  {{!-- CHANGE: Share-Button in Akzentfarbe --}}
+  <style>
+    .gh-button-share {
+      border: 1px solid {{@site.accent_color}};
+      color: {{@site.accent_color}};
+    }
+.gh-button-share:hover {
+      background-color: {{@site.accent_color}};
+  border: 1px solid {{@site.accent_color}};
+      color: #ffffff;
+    }
+    
+  </style>
                 <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
             </div>
             {{> "post-image"}}

@@ -3,11 +3,17 @@
 <div class="gh-outer">
 <main class="site-main gh-inner">
 
+ {{!-- CHANGE: Neueste Einträge auflisten --}}    
+  {{!--
+    {{> "latest-posts"}}
+   --}}
+ {{!-- CHANGE: Neueste Einträge auflisten --}}
+
     {{#if @custom.show_featured_posts}}
         {{> "featured-posts"}}
     {{/if}}
 
-    {{#get "tags" limit="100"}}
+    {{#get "tags" limit="10"}}
     <div class="topic-feed">
 
         {{#foreach tags}}
@@ -30,12 +36,15 @@
                         {{/foreach}}
                     </ul>
                 {{/get}}
-                <a class="topic-more" href="{{url}}">Show more →</a>
+                {{!-- CHANGE: Übersetzung für "Show more" --}}
+                <a class="topic-more" href="{{url}}">{{t "Show more"}} →</a>
+                {{!-- CHANGE: Übersetzung für "Show more" --}}
             </section>
         {{/foreach}}
 
     </div>
     {{/get}}
+
 
 </main>
 </div>
