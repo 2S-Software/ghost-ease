@@ -26,16 +26,17 @@
 {{/if}}
 {{!-- CHANGE: Auszug im Post --}}
           
-            <div class="gh-meta-share">                
+            <div class="gh-meta-share">
                 <div class="post-meta">
-                    {{t "Last updated on"}}&nbsp;
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="D MMM YYYY"}}</time>
-                  {{!-- CHANGE: Reading time --}}
-                  &nbsp;|&nbsp;                  
-                  <span class="reading-time">{{reading_time minute="1 Min." minutes="% Min."}}&nbsp;{{t "reading time"}}</span>
-                  {{!-- CHANGE: Reading time --}}
-                                   
-                  
+                    <div class="post-meta-updated">
+                        {{t "Last updated on"}}&nbsp;
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date updated_at format="D MMM YYYY"}}</time>
+                    </div>
+                    {{!-- CHANGE: Reading time --}}
+                    <div class="post-meta-reading-time">
+                        <span class="reading-time">{{reading_time minute="1 Min." minutes="% Min."}}&nbsp;{{t "reading time"}}</span>
+                    </div>
+                    {{!-- CHANGE: Reading time --}}
                 </div>
   {{!-- CHANGE: Share-Button in Akzentfarbe --}}
   <style>
@@ -48,8 +49,8 @@
   border: 1px solid {{@site.accent_color}};
       color: #ffffff;
     }
-    
   </style>
+  {{!-- CHANGE: Share-Button in Akzentfarbe --}}
                 <a href="#/share" class="gh-button-share">{{t "Share"}}</a>
             </div>
             {{> "post-image"}}
