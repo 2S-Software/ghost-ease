@@ -39,13 +39,17 @@
 .gh-meta-share .post-meta {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    line-height: 1.4;
+    gap: 2px;
+    line-height: 1.2;
 }
 
 .gh-meta-share .post-meta-updated,
 .gh-meta-share .post-meta-reading-time {
     white-space: nowrap;
+}
+
+.gh-article-image figcaption {
+    font-size: 1.2rem;
 }
 
 .post-author {
