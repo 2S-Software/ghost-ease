@@ -18,7 +18,7 @@
     background-image: none;
 }
 
-.gh-content table:not(.gist table) thead th {
+.gh-content table:not(.gist table) th {
     padding: 1rem 1.4rem;
     border: 0;
     border-right: 1px solid #dee1e3;
@@ -31,17 +31,13 @@
     letter-spacing: normal;
 }
 
-.gh-content table:not(.gist table) thead th:last-child {
-    border-right: 0;
-}
-
-.gh-content table:not(.gist table) tbody td {
+.gh-content table:not(.gist table) td {
     padding: 0.9rem 1.4rem;
     border: 0;
     border-right: 1px solid #dee1e3;
 }
 
-.gh-content table:not(.gist table) tbody td:last-child {
+.gh-content table:not(.gist table) :is(th, td):last-child {
     border-right: 0;
 }
 
@@ -60,10 +56,6 @@
     border-right: 1px solid #dee1e3;
     background: #f1f3f3;
     font-weight: 600;
-}
-
-.gh-content table:not(.gist table) tfoot td:last-child {
-    border-right: 0;
 }
 
 .gh-content table .num {
